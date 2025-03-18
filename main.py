@@ -9,7 +9,8 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-        self.geometry('1100x500')
+        self.geometry('1100x550')
+        self.title('My First CTk UI')
 
         self.grid_columnconfigure(1, weight=1)
         self.grid_columnconfigure((2, 3), weight=0)
@@ -44,6 +45,14 @@ class App(customtkinter.CTk):
         ####### check box
         self.checkboxFrame = CheckboxFrame(self)
         self.checkboxFrame.grid(column=3, row=1, sticky='nsew', padx=(0, 15))
+
+        ###### entry
+        self.myEntry = customtkinter.CTkEntry(self, placeholder_text='Entry ...')
+        self.myEntry.grid(column=1, row=2, columnspan=2, sticky='ew', padx=15, pady=15)
+
+        ####### btn
+        self.btn = customtkinter.CTkButton(self, text='Button1')
+        self.btn.grid(column=3, row=2, sticky='ew', padx=(0, 15), pady=15)
 
 
 if __name__ == '__main__':
