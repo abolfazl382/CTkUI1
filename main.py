@@ -21,7 +21,7 @@ class App(customtkinter.CTk):
         self.sidebar.grid(row=0, column=0, rowspan=4, sticky='nsew')
 
         ######## text box
-        self.textbox = customtkinter.CTkTextbox(self, wrap='word', font=customtkinter.CTkFont(size=18))
+        self.textbox = customtkinter.CTkTextbox(self, wrap='word', font=customtkinter.CTkFont(size=16), padx=5, pady=5)
         self.textbox.grid(row=0, column=1, sticky='nsew', padx=15, pady=20)
 
         self.file1 = open("MyFile1.txt", "r+")
